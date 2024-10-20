@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffbe7;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 36px;
+        }
+        p {
+            font-size: 24px;
+            color: #555;
+        }
+        #countdown {
+            font-size: 30px;
+            color: #ff4444;
+        }
+        .tree {
+            margin-top: 20px;
+            font-size: 80px;
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vietnamese Women's Day </h1>
+        <p>Dear Xuyến, on this special day, I want to wish you endless happiness and beauty.</p>
+        <p>You are the light in my life, bringing joy to every moment.</p>
+        <p>Thank you for all the wonderful things you bring into my life.</p>
+        <p>I will always be by your side and love you deeply.</p>
+        <!-- Image -->
+        <img src="D:\20.10.PNG" alt="Love Image">
+        <!-- Countdown Timer -->
+        <p id="countdown"></p>
+
+        <!-- Heart or Tree Image -->
+        <div class="tree">💖💖💖</div>
+    </div>
+
+    <script>
+        // Set the target date to November 28, 2023
+        var startDate = new Date("Nov 28, 2023 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        var countdownFunction = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = now - startDate;
+
+            // Time calculations for days, hours, minutes, and seconds since November 28, 2023
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="countdown"
+            document.getElementById("countdown").innerHTML = days + " days " + hours + " hours "
+            + minutes + " minutes " + seconds + " seconds since I started loving you.";
+
+        }, 1000);
+    </script>
+</body>
+</html>
